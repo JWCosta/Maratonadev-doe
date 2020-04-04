@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Doe sangue e salve VIDAS ! </title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" class="logo" alt="Imagem de DOE">
+        <h2>A sua doação importa ! </h2>
+        <p>Até 3 vidas com uma doação;</p>
+        <p>Mais de 38.000 doações são necessárias todos os dias;</p>
+        <p>Apenas 1,9% da população brasileira doa sangue.</p>
+
+
+        <button>QUERO DOAR</button>
+
+    </header>
+    <section class="form hide">
+        <h2>Entre na lista de doadores</h2>
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome Completo">
+            <input type="text" name="email" placeholder="E-mail">
+            <input type="text" name="blood" placeholder="Tipo sanguíneo">
+
+            <button>QUERO DOAR</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Últimos <span>doadores</span></h2>
+        <section class="donors">
+
+            {% for donor in donors %}
+
+            <div class="donor">
+                <div class="blood">{{donor.blood}}</div>
+                <p>{{donor.name}}</p>
+
+            </div>
+
+            {%endfor%}
+
+
+        </section>
+    </main>
+    <footer>Com 💓 Jonathan Costa></footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
